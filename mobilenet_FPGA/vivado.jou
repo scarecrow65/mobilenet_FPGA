@@ -23,3 +23,17 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/aadya/Desktop/mobilenet_FPGA/mobilenet_FPGA/mobilenet_FPGA.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/aadya/Desktop/mobilenet_FPGA/mobilenet_FPGA/codes/multiplier/multiplier_48x24.v
+update_compile_order -fileset sources_1
+launch_simulation
+source quantizer.tcl
+add_bp {C:/Users/aadya/Desktop/mobilenet_FPGA/mobilenet_FPGA/codes/compute/quantizer.v} 46
+remove_bps -file {C:/Users/aadya/Desktop/mobilenet_FPGA/mobilenet_FPGA/codes/compute/quantizer.v} -line 46
+add_bp {C:/Users/aadya/Desktop/mobilenet_FPGA/mobilenet_FPGA/codes/compute/quantizer.v} 46
+remove_bps -file {C:/Users/aadya/Desktop/mobilenet_FPGA/mobilenet_FPGA/codes/compute/quantizer.v} -line 46
+add_bp {C:/Users/aadya/Desktop/mobilenet_FPGA/mobilenet_FPGA/codes/compute/quantizer.v} 46
+remove_bps -file {C:/Users/aadya/Desktop/mobilenet_FPGA/mobilenet_FPGA/codes/compute/quantizer.v} -line 46
+add_bp {C:/Users/aadya/Desktop/mobilenet_FPGA/mobilenet_FPGA/codes/compute/quantizer.v} 46
+remove_bps -file {C:/Users/aadya/Desktop/mobilenet_FPGA/mobilenet_FPGA/codes/compute/quantizer.v} -line 46
+close_sim
